@@ -44,13 +44,12 @@ public class LoopFun
       public String encrypt(String word) {
           String encrypt = "";
           for (int i = 0; i < word.length(); i++) {
-              char c = (char)(word.charAt(i) + 3);
-              if (c > 'z')
-                  encrypt += (char)(word.charAt(i)-(23));
-              else {
-                  encrypt += (char)(word.charAt(i) + 3);
-              }
+              char letter = word.charAt(i);
+              letter += 3;
+              if (letter > 'z') letter -= 26;
+              encrypt += letter;
           }
           return encrypt;
       }
+
 }
