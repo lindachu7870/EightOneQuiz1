@@ -45,9 +45,9 @@ public class StringUtilities {
      * @param charToRemove character to be removed from `value`
      * @return `value` with char of value `charToRemove` removed
      */
-    // Not working, come back later
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String strNew = value.replace(String.valueOf(charToRemove), "");
+        return strNew;
     }
 
     /**

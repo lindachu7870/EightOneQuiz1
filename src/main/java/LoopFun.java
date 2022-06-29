@@ -1,4 +1,3 @@
- 
 
 public class LoopFun
 {
@@ -12,7 +11,7 @@ public class LoopFun
       public Integer factorial(Integer number){
           int factorial = 1;
           for (int i = 1; i <= number; i++) {
-              factorial = factorial * i;
+              factorial *= i;
           }
           return factorial;
       }
@@ -43,6 +42,15 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String encrypt = "";
+          for (int i = 0; i < word.length(); i++) {
+              char c = (char)(word.charAt(i) + 3);
+              if (c > 'z')
+                  encrypt += (char)(word.charAt(i)-(23));
+              else {
+                  encrypt += (char)(word.charAt(i) + 3);
+              }
+          }
+          return encrypt;
       }
 }
