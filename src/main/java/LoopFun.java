@@ -1,4 +1,4 @@
- 
+// Quiz 1 - Linda Li
 
 public class LoopFun
 {
